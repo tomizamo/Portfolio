@@ -9,17 +9,7 @@
     src: url('../../resources/fonts/PPFragment-GlareRegular.otf') format('opentype');
     font-weight: 700;
 }
-@font-face {
-    font-family: 'PP Neue Montreal Medium';
-    src: url('../../resources/fonts/ppneuemontreal-medium.otf') format('opentype');
-    font-weight: 400;
-}
 
-@font-face {
-    font-family: 'PP Neue Montreal Bold';
-    src: url('../../resources/fonts/ppneuemontreal-bold.otf') format('opentype');
-    font-weight: 700;
-}
 :root {
 
     --bg-main: #1A1A1A;
@@ -122,13 +112,13 @@ body {
     margin-bottom: 12px;
 }
 .proyect_title {
-    font-family: var(--font-ppFrText);
+    font-family: var(--font-PPFrText);
     font-weight: 400;
     font-size: 64px;
 
 }
 .proyect_category {
-    font-family: var(--font-ppFrText);
+    font-family: var(--font-PPFrText);
     color: var(--text-muted);
     font-size: 24px;
 }
@@ -165,12 +155,12 @@ body {
     font-family: var(--font-ppFrGlare);
     font-size: 36px;
     text-align: left;
-    tex
+    text-align: justify;
     /*hyphens: auto;*/
 }
 .split_visual {
     width: 100%;
-    max-width: 100%; /* Nunca se hace más grande que la pantalla */
+    max-width: 100%;
     height: auto;
     display: block;
 }
@@ -192,18 +182,18 @@ body {
 
 @media (max-width: 768px) {
     .window_split {
-        grid-template-columns: 1fr; /* Pasa de 2 columnas a 1 sola */
+        grid-template-columns: 1fr;
         gap: 32px;
         padding: 0 24px;
     }
 
     .split_texto, .split_texto2 {
         padding: 0;
-        font-size: 24px; /* Bajamos el tamaño para móviles */
+        font-size: 24px;
     }
 
     .t1, .t2 {
-        font-size: 48px; /* Títulos más chicos para celular */
+        font-size: 48px;
         padding: 0 24px;
     }
 }
