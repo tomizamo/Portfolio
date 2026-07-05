@@ -1,0 +1,248 @@
+/* ==========================================================================
+   1. SISTEMA DE VARIABLES & CONFIGURACIÓN TIPOGRÁFICA
+   ========================================================================== */
+:root {
+    --bg-main: #1A1A1A;
+    --bg-surface: #121212;
+    --bg-glass: rgba(20, 20, 20, 0.55);
+
+    --text-main: #F5F5F0;       /* Blanco tiza mate para alto contraste */
+    --text-muted: #787878;      /* Gris grafito para subtítulos y metadata */
+    --border-line: rgba(255, 255, 255, 0.12);
+    --border-subtle: rgba(255, 255, 255, 0.06);
+
+    --font-satoshi: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-lora: 'Lora', Georgia, serif;
+    --font-mono: 'Fragment Mono', monospace;
+    --font-glare: 'Bodoni Moda', 'Playfair Display', serif; /* Alta elegancia Serif */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-satoshi);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+}
+
+
+.font-satoshi { font-family: var(--font-satoshi); }
+.font-lora { font-family: var(--font-lora); }
+.font-mono { font-family: var(--font-mono); }
+.font-glare { font-family: var(--font-glare); }
+
+.viewport_1920_container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 48px;
+    position: relative;
+}
+
+
+.main_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    font-family: font-satoshi, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+}
+.header-nav {
+    display: flex;
+    gap: 40px;
+}
+.brand-name {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 500;
+}
+.nav-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--text-main);
+}
+
+.project_container {
+    max-width: 1728px;
+    margin: 0 auto;
+    padding: 0px 0 120px 0;
+}
+
+
+/*========================================================================== */
+
+.hero-title {
+    font-size: clamp(2.5rem, 4.5vw, 4.2rem);
+    font-weight: 400;
+    line-height: 1.15;
+    max-width: 1300px;
+    color: var(--text-main);
+}
+.hero-subtitle {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 24px;
+}
+
+hr.divisor-editorial {
+    border: none;
+    height: 1px;
+    background-color: var(--border-line);
+    margin-top: 80px;
+}
+
+/* ==========================================================================
+   4. TARJETA DE PROYECTO (CASE STUDY)
+   ========================================================================== */
+.project-card {
+    border: 1px solid var(--border-line);
+    border-radius: 12px;
+    padding: 56px;
+    background: var(--bg-surface);
+}
+
+.project-header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 16px;
+}
+
+.project-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-name {
+    font-size: 3.5rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+.project-tags {
+    display: flex;
+    gap: 12px;
+}
+
+.tag {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+    border: 1px solid var(--border-line);
+    border-radius: 999px;
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.project-description {
+    font-size: 1.25rem;
+    color: #CCCCCC;
+    max-width: 850px;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   5. MOCKUP LIQUID GLASS SHOWCASE
+   ========================================================================== */
+.liquid-glass-showcase {
+    border: 1px solid var(--border-line);
+    border-radius: 8px;
+    background: var(--bg-glass);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    padding: 24px;
+    margin-bottom: 40px;
+}
+
+.mockup-header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+}
+
+.media-container {
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+    background: #000;
+}
+
+.media-container video,
+.media-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================================================
+   6. INTERACCIONES & BOTONES
+   ========================================================================== */
+.project-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-editorial {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 32px;
+    border: 1px solid var(--text-main);
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.btn-editorial:hover {
+    background: var(--text-main);
+    color: var(--bg-main);
+}
+
+.btn-editorial:hover .arrow {
+    transform: translateX(4px);
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+/* Adaptabilidad Responsiva para pantallas menores a 1920px */
+@media (max-width: 1200px) {
+    .viewport_1920_container { padding: 0 24px; }
+    .project-card { padding: 32px; }
+    .project-title-row { flex-direction: column; }
+    .hero-title { font-size: 2.5rem; }
+}

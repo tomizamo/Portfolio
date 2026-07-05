@@ -1,0 +1,277 @@
+@font-face {
+    font-family: 'PP Fragment Text';
+    src: url('resources/fonts/PPFragment-TextRegular.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'PP Fragment Glare';
+    src: url('resources/fonts/PPFragment-GlareRegular.otf') format('opentype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'PP Neue Montreal Medium';
+    src: url('resources/fonts/ppneuemontreal-medium.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'PP Neue Montreal Bold';
+    src: url('resources/fonts/ppneuemontreal-bold.otf') format('opentype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'PP Mori Medium';
+    src: url('resources/fonts/PPMori-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'PP Mori Bold';
+    src: url('resources/fonts/PPMori-SemiBold.otf') format('opentype');
+}
+:root {
+    --bg-main: #1A1A1A;
+    --bg-surface: #121212;
+    --bg-glass: rgba(20, 20, 20, 0.55);
+    --text-main: #F5F5F0;
+    --text-muted: #787878;
+    --gris_transparente: rgba(255, 255, 255, 0.12);
+
+    --font-satoshi: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-lora: 'Lora', Georgia, serif;
+    --font-literata: 'Literata', Georgia, serif;
+    --font-mono: 'Fragment Mono', monospace;
+    --font-glare: 'Bodoni Moda', 'Playfair Display', serif;
+    --font-PPFrText: 'PP Fragment Text', monospace;
+    --font-ppFrGlare: 'PP Fragment Glare', serif;
+    --font-ppNeueMontrealM: 'PP Neue Montreal Medium', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-ppNeueMontrealB: 'PP Neue Montreal Bold', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-ppMoriM: 'PP Mori Medium', sans-serif;
+    --font-ppMoriB: 'PP Mori Bold', sans-serif;
+}
+
+.font-satoshi             { font-family: var(--font-satoshi);         }
+.font-lora                { font-family: var(--font-lora);            }
+.font-literata            { font-family: var(--font-literata);        }
+.font-mono                { font-family: var(--font-mono);            }
+.font-glare               { font-family: var(--font-glare);           }
+.font-PPFrText            { font-family: var(--font-PPFrText);        }
+.font-ppFrGlare           { font-family: var(--font-ppFrGlare);       }
+.font-ppNeueMontrealM     { font-family: var(--font-ppNeueMontrealM); }
+.font-ppNeueMontrealB     { font-family: var(--font-ppNeueMontrealB); }
+.font-ppMoriM             { font-family: var(--font-ppMoriM);         }
+.font-ppMoriB             { font-family: var(--font-ppMoriB);         }
+
+
+* {box-sizing: border-box;margin: 0;padding: 0;}
+
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-satoshi);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+}
+
+.viewport_1920_container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 48px;
+    position: relative;
+}
+.main_header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    width: 100%;
+    padding: 4px 0;
+    border-bottom: 1px solid var(--gris_transparente);
+    font-family: var(--font-satoshi), sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+}
+.name_nav{
+    color: var(--text-main);
+    font-family: var(--font-satoshi);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+}
+.header_nav {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: normal;
+}
+.nav_link{
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: normal;
+    padding: 0 4px;
+}
+.nav_link:hover, .nav_link.active {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav_link_active{
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: bold;
+}
+.proyect_container {
+    background-color: var(--bg-surface);
+    max-width: 1728px;
+    margin: 0 auto;
+    padding: 0px 0px 120px 0;
+}
+.main_title {
+    padding: 2% 0 0 0;
+    color: var(--text-main);
+    font-family: var(--font-ppMoriB);
+    /* El texto intentará ser el 6% del ancho de la pantalla (6vw),
+       pero NUNCA bajará de 40px en celulares ni pasará de 96px en monitores grandes */
+    font-size: clamp(26px, 6vw, 40px);
+}
+.main_description{
+    padding: 2% 0 0 0;
+    color: var(--text-muted);
+    font-family: var(--font-ppMoriB);
+    font-weight: 800;
+    font-size: clamp(12px, 6vw, 36px);
+}
+
+.main_skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    width: 100%;
+    margin-top: 64px;
+    padding-top: 32px;
+    /*border-top: 1px solid var(--border-tech);*/
+}
+
+.skill_box {
+    background-color: var(--bg-surface);
+    /*border: 1px solid var(--border-tech);*/
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 120px;
+}
+
+.skill_num {
+    /*color: var(--accent); */
+    font-size: 14px;
+    letter-spacing: 0.05em;
+}
+
+.skill_title {
+    color: var(--text-main);
+    font-size: 16px;
+    margin-top: 16px;
+    letter-spacing: 0.02em;
+}
+/*%%%%%%%%%%%%%%%%%%LOCTOR%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+/*.proyect_container {*/
+/*    background-color: var(--bg-surface);*/
+/*    max-width: 1728px;*/
+/*    margin: 0 auto;*/
+/*    padding: 0px 0px 120px 0;*/
+
+/*}*/
+/*.proyect_navbar {*/
+/*    border-bottom: 1px solid var(--gris_transparente);*/
+/*    padding: 0 40px;*/
+/*    margin-bottom: 12px;*/
+/*}*/
+/*.proyect_title {*/
+/*    font-family: var(--font-ppFrText);*/
+/*    font-weight: 400;*/
+/*    font-size: 64px;*/
+
+/*}*/
+/*.proyect_category {*/
+/*    font-family: var(--font-ppFrText);*/
+/*    color: var(--text-muted);*/
+/*    font-size: 24px;*/
+/*}*/
+/*.proyect_intro {*/
+/*    font-family: var(--font-ppFrText);*/
+/*    color: var(--text-main);*/
+/*    font-size: 40px;*/
+/*    padding:0 40px;*/
+/*    letter-spacing: -0.04em;*/
+/*    word-spacing: -0.04em;*/
+/*}*/
+
+/*.wordkmark_video {*/
+/*    display: block;*/
+/*    margin: 0 auto;*/
+/*    width: 100%;*/
+/*    max-height: 210px;*/
+/*    aspect-ratio: 1728 / 420;*/
+/*    padding-top: 24px ;*/
+/*}*/
+/*.t1 {*/
+/*    padding: 0 40px;*/
+/*    font-family: var(--font-ppFrGlare);*/
+/*    font-size: 96px;*/
+/*}*/
+/*.window_split {*/
+/*    display: grid;*/
+/*    grid-template-columns: 1fr 1fr;*/
+/*    gap: 12px;*/
+/*    align-items: center;*/
+/*}*/
+/*.split_texto {*/
+/*    padding: 0 2%;*/
+/*    font-family: var(--font-ppFrGlare);*/
+/*    font-size: 36px;*/
+/*    text-align: left;*/
+/*    tex*/
+/*    !*hyphens: auto;*!*/
+/*}*/
+/*.split_visual {*/
+/*    width: 100%;*/
+/*    max-width: 100%; !* Nunca se hace más grande que la pantalla *!*/
+/*    height: auto;*/
+/*    display: block;*/
+/*}*/
+/*.split_texto2 {*/
+/*    padding: 0 40px;*/
+/*    font-family: var(--font-ppFrGlare);*/
+/*    font-size: 36px;*/
+/*    !*text-align: justify;*!*/
+/*    !*hyphens: auto;*!*/
+/*}*/
+/*.img_2 {*/
+/*    padding: 0 40px;*/
+/*}*/
+/*.t2 {*/
+/*    font-family: var(--font-ppFrGlare);*/
+/*    font-size: 96px;*/
+/*    text-align: left;*/
+/*}*/
+
+/*@media (max-width: 768px) {*/
+/*    .window_split {*/
+/*        grid-template-columns: 1fr; !* Pasa de 2 columnas a 1 sola *!*/
+/*        gap: 32px;*/
+/*        padding: 0 24px;*/
+/*    }*/
+
+/*    .split_texto, .split_texto2 {*/
+/*        padding: 0;*/
+/*        font-size: 24px; !* Bajamos el tamaño para móviles *!*/
+/*    }*/
+
+/*    .t1, .t2 {*/
+/*        font-size: 48px; !* Títulos más chicos para celular *!*/
+/*        padding: 0 24px;*/
+/*    }*/
+/*}*/
+/*%%%%%%%%%%%%%%%%%%LOCTOR%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
