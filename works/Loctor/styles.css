@@ -144,7 +144,7 @@ body {
     font-family: var(--font-ppFrGlare);
     font-size: 96px;
 }
-.window_split {
+.tile_card {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
@@ -181,7 +181,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    .window_split {
+    .tile_card {
         grid-template-columns: 1fr;
         gap: 32px;
         padding: 0 24px;
